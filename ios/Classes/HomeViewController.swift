@@ -132,10 +132,10 @@ class HomeViewController: UIViewController, ImageScannerControllerDelegate {
                 view.safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: selectPhotoButton.bottomAnchor, constant: (65.0 / 2) - 10.0)
             ]
             showAllPhotosButtonConstraints = [
-                selectPhotoButton.widthAnchor.constraint(equalToConstant: 44.0),
-                selectPhotoButton.heightAnchor.constraint(equalToConstant: 44.0),
-                selectPhotoButton.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -48.0),
-                view.safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: selectPhotoButton.bottomAnchor, constant: (65.0 / 2) - 10.0)
+                showAllPhotosButton.widthAnchor.constraint(equalToConstant: 44.0),
+                showAllPhotosButton.heightAnchor.constraint(equalToConstant: 44.0),
+                showAllPhotosButton.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -48.0),
+                view.safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: showAllPhotosButton.bottomAnchor, constant: (65.0 / 2) - 10.0)
             ]
         } else {
             selectPhotoButtonConstraints = [
@@ -145,10 +145,10 @@ class HomeViewController: UIViewController, ImageScannerControllerDelegate {
                 view.bottomAnchor.constraint(equalTo: selectPhotoButton.bottomAnchor, constant: (65.0 / 2) - 10.0)
             ]
             showAllPhotosButtonConstraints = [
-                selectPhotoButton.widthAnchor.constraint(equalToConstant: 44.0),
-                selectPhotoButton.heightAnchor.constraint(equalToConstant: 44.0),
-                selectPhotoButton.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -48.0),
-                view.safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: selectPhotoButton.bottomAnchor, constant: (65.0 / 2) - 10.0)
+                showAllPhotosButton.widthAnchor.constraint(equalToConstant: 44.0),
+                showAllPhotosButton.heightAnchor.constraint(equalToConstant: 44.0),
+                showAllPhotosButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -48.0),
+                view.bottomAnchor.constraint(equalTo: showAllPhotosButton.bottomAnchor, constant: (65.0 / 2) - 10.0)
             ]
         }
         NSLayoutConstraint.activate(selectPhotoButtonConstraints + showAllPhotosButtonConstraints)
