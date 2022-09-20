@@ -66,7 +66,7 @@ class HomeViewController: UIViewController, ImageScannerControllerDelegate {
 
         lazy var showAllPhotosButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(named: "show", in: Bundle(for: SwiftEdgeDetectionPlugin.self), compatibleWith: nil)?.withRenderingMode(.alwaysTemplate), for: .normal)
+        button.setImage(UIImage(named: "gallery", in: Bundle(for: SwiftEdgeDetectionPlugin.self), compatibleWith: nil)?.withRenderingMode(.alwaysTemplate), for: .normal)
         button.tintColor = UIColor.white
         button.addTarget(self, action: #selector(showPhotos), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -134,7 +134,7 @@ class HomeViewController: UIViewController, ImageScannerControllerDelegate {
             showAllPhotosButtonConstraints = [
                 selectPhotoButton.widthAnchor.constraint(equalToConstant: 44.0),
                 selectPhotoButton.heightAnchor.constraint(equalToConstant: 44.0),
-//                 selectPhotoButton.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: 15.0),
+                selectPhotoButton.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -48.0),
                 view.safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: selectPhotoButton.bottomAnchor, constant: (65.0 / 2) - 10.0)
             ]
         } else {
@@ -147,7 +147,7 @@ class HomeViewController: UIViewController, ImageScannerControllerDelegate {
             showAllPhotosButtonConstraints = [
                 selectPhotoButton.widthAnchor.constraint(equalToConstant: 44.0),
                 selectPhotoButton.heightAnchor.constraint(equalToConstant: 44.0),
-//                 selectPhotoButton.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -48.0),
+                selectPhotoButton.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -48.0),
                 view.safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: selectPhotoButton.bottomAnchor, constant: (65.0 / 2) - 10.0)
             ]
         }
