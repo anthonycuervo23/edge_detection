@@ -151,7 +151,7 @@ class HomeViewController: UIViewController, ImageScannerControllerDelegate {
                 view.safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: selectPhotoButton.bottomAnchor, constant: (65.0 / 2) - 10.0)
             ]
         }
-        NSLayoutConstraint.activate(selectPhotoButtonConstraints + showAllPhotosButtonConstraints)
+        NSLayoutConstraint.activate([selectPhotoButtonConstraints, showAllPhotosButtonConstraints])
     }
     
     func setParams(saveTo: String, canUseGallery: Bool) {
