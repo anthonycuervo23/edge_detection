@@ -51,6 +51,7 @@ class HomeViewController: UIViewController, ImageScannerControllerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         if (canUseGallery == true) {
             selectPhotoButton.isHidden = false
+            showAllPhotosButton.isHidden = false
         }
     }
     
@@ -70,7 +71,7 @@ class HomeViewController: UIViewController, ImageScannerControllerDelegate {
         button.tintColor = UIColor.white
         button.addTarget(self, action: #selector(showPhotos), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.isHidden = false
+        button.isHidden = true
         return button
     }()
     
@@ -134,7 +135,7 @@ class HomeViewController: UIViewController, ImageScannerControllerDelegate {
             showAllPhotosButtonConstraints = [
                 showAllPhotosButton.widthAnchor.constraint(equalToConstant: 44.0),
                 showAllPhotosButton.heightAnchor.constraint(equalToConstant: 44.0),
-                showAllPhotosButton.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: 48.0),
+                showAllPhotosButton.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: 48.0),
                 view.safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: showAllPhotosButton.bottomAnchor, constant: (65.0 / 2) - 10.0)
             ]
         } else {
