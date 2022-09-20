@@ -131,14 +131,14 @@ class HomeViewController: UIViewController, ImageScannerControllerDelegate {
                 selectPhotoButton.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -24.0),
                 view.safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: selectPhotoButton.bottomAnchor, constant: (65.0 / 2) - 10.0)
             ]
-            selectPhotoButtonConstraints = [
+            showAllPhotosButtonConstraints = [
                 selectPhotoButton.widthAnchor.constraint(equalToConstant: 44.0),
                 selectPhotoButton.heightAnchor.constraint(equalToConstant: 44.0),
                 selectPhotoButton.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -48.0),
                 view.safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: selectPhotoButton.bottomAnchor, constant: (65.0 / 2) - 10.0)
             ]
         } else {
-            showAllPhotosButtonConstraints = [
+            selectPhotoButtonConstraints = [
                 selectPhotoButton.widthAnchor.constraint(equalToConstant: 44.0),
                 selectPhotoButton.heightAnchor.constraint(equalToConstant: 44.0),
                 selectPhotoButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -24.0),
@@ -151,7 +151,7 @@ class HomeViewController: UIViewController, ImageScannerControllerDelegate {
                 view.safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: selectPhotoButton.bottomAnchor, constant: (65.0 / 2) - 10.0)
             ]
         }
-        NSLayoutConstraint.activate([selectPhotoButtonConstraints, showAllPhotosButtonConstraints])
+        NSLayoutConstraint.activate(selectPhotoButtonConstraints + showAllPhotosButtonConstraints)
     }
     
     func setParams(saveTo: String, canUseGallery: Bool) {
