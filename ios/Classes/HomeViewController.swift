@@ -134,7 +134,7 @@ class HomeViewController: UIViewController, ImageScannerControllerDelegate {
             showAllPhotosButtonConstraints = [
                 selectPhotoButton.widthAnchor.constraint(equalToConstant: 44.0),
                 selectPhotoButton.heightAnchor.constraint(equalToConstant: 44.0),
-                selectPhotoButton.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -48.0),
+//                 selectPhotoButton.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: 15.0),
                 view.safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: selectPhotoButton.bottomAnchor, constant: (65.0 / 2) - 10.0)
             ]
         } else {
@@ -147,7 +147,7 @@ class HomeViewController: UIViewController, ImageScannerControllerDelegate {
             showAllPhotosButtonConstraints = [
                 selectPhotoButton.widthAnchor.constraint(equalToConstant: 44.0),
                 selectPhotoButton.heightAnchor.constraint(equalToConstant: 44.0),
-                selectPhotoButton.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -48.0),
+//                 selectPhotoButton.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -48.0),
                 view.safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: selectPhotoButton.bottomAnchor, constant: (65.0 / 2) - 10.0)
             ]
         }
